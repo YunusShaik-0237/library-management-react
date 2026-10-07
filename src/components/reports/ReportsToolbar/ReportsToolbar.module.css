@@ -1,0 +1,177 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: #fff;
+
+  padding: 20px;
+
+  border-radius: 18px;
+}
+
+/* Search */
+
+.searchBox {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  height: 56px;
+
+  padding: 0 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  transition: .25s;
+}
+
+.searchBox:focus-within {
+  background: #fff;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+}
+
+.icon {
+  color: #64748b;
+
+  font-size: 18px;
+}
+
+.searchInput {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+/* Select */
+
+.select,
+.dateInput {
+  width: 180px;
+
+  height: 56px;
+
+  padding: 0 16px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  font-size: 15px;
+
+  transition: .25s;
+}
+
+.select:focus,
+.dateInput:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+}
+
+/* Button */
+
+.actions {
+  display: flex;
+}
+
+.resetBtn {
+  height: 56px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.resetBtn:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border-color: #2563eb;
+}
+
+@media (max-width:1200px){
+
+.toolbar{
+flex-wrap:wrap;
+}
+
+.searchBox{
+width:100%;
+}
+
+.select,
+.dateInput{
+flex:1;
+min-width:180px;
+}
+
+.actions{
+width:100%;
+justify-content:flex-end;
+}
+
+}
+
+@media(max-width:768px){
+
+.toolbar{
+padding:16px;
+gap:12px;
+}
+
+.searchBox,
+.select,
+.dateInput,
+.resetBtn{
+width:100%;
+}
+
+.actions{
+width:100%;
+}
+
+.resetBtn{
+justify-content:center;
+}
+
+}

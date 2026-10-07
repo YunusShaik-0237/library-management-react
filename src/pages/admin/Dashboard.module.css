@@ -1,0 +1,55 @@
+/* ==========================================
+   Dashboard
+========================================== */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  padding: 24px;
+}
+
+/* ==========================================
+   Two Column Grid
+========================================== */
+
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ==========================================
+   Full Width Section
+========================================== */
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .twoColumnGrid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    padding: 18px;
+    gap: 20px;
+  }
+
+  .twoColumnGrid {
+    gap: 20px;
+  }
+
+}

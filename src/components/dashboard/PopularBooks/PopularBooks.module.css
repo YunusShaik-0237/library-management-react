@@ -1,0 +1,182 @@
+/* ==========================================
+   Popular Books
+========================================== */
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.header h2 {
+  font-size: 20px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.viewAllBtn {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  color: #1d4ed8;
+  transform: translateX(4px);
+}
+
+/* ==========================================
+   Books List
+========================================== */
+
+.bookList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ==========================================
+   Book Card
+========================================== */
+
+.bookCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px;
+
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+
+  background: #f8fafc;
+
+  transition: all 0.3s ease;
+}
+
+.bookCard:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  transform: translateX(6px);
+}
+
+/* ==========================================
+   Icon
+========================================== */
+
+.icon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #2563eb;
+  color: white;
+
+  flex-shrink: 0;
+
+  font-size: 18px;
+}
+
+/* ==========================================
+   Book Info
+========================================== */
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 15px;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.info p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ==========================================
+   Borrow Badge
+========================================== */
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: #fff7ed;
+  color: #ea580c;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.badge svg {
+  font-size: 13px;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 18px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bookCard {
+    padding: 12px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+}

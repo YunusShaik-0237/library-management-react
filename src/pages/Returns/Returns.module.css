@@ -1,0 +1,167 @@
+/* ==========================================
+   Page Layout
+========================================== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ==========================================
+   Banner
+========================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  padding: 28px 32px;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18);
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
+}
+
+/* ==========================================
+   Statistics Cards
+========================================== */
+
+.stats {
+  display: flex;
+  gap: 18px;
+}
+
+.statCard {
+  min-width: 140px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  text-align: center;
+
+  transition: 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.statCard h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.statCard span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.card {
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+/* ==========================================
+   Pagination
+========================================== */
+
+.paginationWrapper {
+  margin-top: -4px;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .stats {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+  }
+
+  .statCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    gap: 20px;
+  }
+
+  .header {
+    padding: 22px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}

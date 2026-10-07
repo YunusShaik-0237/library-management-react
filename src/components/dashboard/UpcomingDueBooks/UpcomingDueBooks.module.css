@@ -1,0 +1,174 @@
+/* ==========================================
+   Upcoming Due Books
+========================================== */
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.header {
+  margin-bottom: 22px;
+}
+
+.header h2 {
+  font-size: 22px;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ==========================================
+   List
+========================================== */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.card {
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  transform: translateX(6px);
+}
+
+/* ==========================================
+   Book Header
+========================================== */
+
+.bookHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bookIcon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 14px;
+
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+
+  transition: all .3s ease;
+}
+
+.card:hover .bookIcon {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.bookHeader h3 {
+  margin-bottom: 6px;
+  color: #0f172a;
+  font-size: 17px;
+}
+
+.bookHeader p {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.footer {
+  margin-top: 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #475569;
+  font-size: 14px;
+}
+
+/* ==========================================
+   Status Badge
+========================================== */
+
+.badge {
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.upcoming {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.dueSoon {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.overdue {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 18px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}

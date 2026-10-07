@@ -1,0 +1,185 @@
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 60px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* ===========================
+   Left Content
+=========================== */
+
+.content {
+  flex: 1;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 30px;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  font-size: .9rem;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.content h1 {
+  font-size: 3.8rem;
+  line-height: 1.15;
+  color: #0f172a;
+  margin-bottom: 25px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #64748b;
+  max-width: 550px;
+  margin-bottom: 35px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 45px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+.primaryBtn {
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.primaryBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  border: 2px solid #2563eb;
+  background: white;
+  color: #2563eb;
+}
+
+.secondaryBtn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===========================
+   Stats
+=========================== */
+
+.stats {
+  display: flex;
+  gap: 50px;
+}
+
+.stats h3 {
+  color: #2563eb;
+  font-size: 1.8rem;
+}
+
+.stats span {
+  color: #64748b;
+}
+
+/* ===========================
+   Image
+=========================== */
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 520px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .content h1 {
+    font-size: 2.8rem;
+  }
+
+  .content p {
+    margin: auto auto 35px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

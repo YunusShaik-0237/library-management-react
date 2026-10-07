@@ -1,0 +1,226 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  backdrop-filter: blur(5px);
+
+  z-index: 9999;
+
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  width: 460px;
+  max-width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 25px 60px rgba(15, 23, 42, .22);
+
+  animation: popup .28s ease;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.dialogHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 38px 34px 24px;
+
+  text-align: center;
+}
+
+.iconContainer {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 22px;
+
+  font-size: 38px;
+
+  user-select: none;
+}
+
+.primaryIcon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.warningIcon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.dangerIcon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.title {
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #1e293b;
+}
+
+.message {
+  margin-top: 14px;
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.dialogFooter {
+  display: flex;
+
+  gap: 16px;
+
+  padding: 24px 34px 34px;
+}
+
+.dialogFooter button {
+  flex: 1;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.cancelButton {
+  background: #e2e8f0;
+
+  color: #334155;
+}
+
+.cancelButton:hover {
+  background: #cbd5e1;
+}
+
+.confirmButton {
+  color: #ffffff;
+}
+
+/* Primary */
+
+.primaryButton {
+  background: #2563eb;
+}
+
+.primaryButton:hover {
+  background: #1d4ed8;
+}
+
+/* Warning */
+
+.warningButton {
+  background: #f59e0b;
+}
+
+.warningButton:hover {
+  background: #d97706;
+}
+
+/* Danger */
+
+.dangerButton {
+  background: #ef4444;
+}
+
+.dangerButton:hover {
+  background: #dc2626;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 640px) {
+  .dialog {
+    width: 100%;
+  }
+
+  .dialogHeader {
+    padding: 30px 24px 20px;
+  }
+
+  .dialogFooter {
+    flex-direction: column;
+
+    padding: 20px 24px 24px;
+  }
+
+  .iconContainer {
+    width: 72px;
+    height: 72px;
+
+    font-size: 32px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

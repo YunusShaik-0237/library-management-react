@@ -1,0 +1,96 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,.45);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:999;
+}
+
+.dialog{
+
+  width:420px;
+
+  background:white;
+
+  border-radius:18px;
+
+  padding:30px;
+
+  text-align:center;
+
+  box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.dialog h2{
+
+  margin-bottom:15px;
+
+  color:#1e293b;
+
+}
+
+.dialog p{
+
+  color:#64748b;
+
+  line-height:1.7;
+
+  margin-bottom:30px;
+
+}
+
+.actions{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:15px;
+
+}
+
+.cancel{
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#e2e8f0;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+}
+
+.delete{
+
+  padding:12px 22px;
+
+  border:none;
+
+  border-radius:10px;
+
+  background:#ef4444;
+
+  color:white;
+
+  cursor:pointer;
+
+  font-weight:600;
+
+}
+
+.delete:hover{
+
+  background:#dc2626;
+
+}

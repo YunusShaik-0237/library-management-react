@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header h2 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #1e293b;
+}
+
+.header p {
+  margin-top: 8px;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+/* Form */
+
+.formGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: auto;
+
+  gap: 10px;
+}
+
+.formGroup label {
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  transition: .25s;
+
+  resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37,99,235,.08);
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 16px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.cancelBtn {
+  border: none;
+
+  background: #e2e8f0;
+
+  color: #334155;
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: .25s;
+}
+
+.cancelBtn:hover {
+  background: #cbd5e1;
+}
+
+.saveBtn {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 14px 26px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: .25s;
+}
+
+.saveBtn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer button {
+    width: 100%;
+  }
+}

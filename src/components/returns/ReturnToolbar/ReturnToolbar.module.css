@@ -1,0 +1,210 @@
+/* ==========================================
+   Toolbar
+========================================== */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: #ffffff;
+
+  padding: 20px;
+
+  border-radius: 18px;
+}
+
+/* ==========================================
+   Search Box
+========================================== */
+
+.searchBox {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  height: 56px;
+
+  padding: 0 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  transition: 0.25s ease;
+}
+
+.searchBox:focus-within {
+  background: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.icon {
+  color: #64748b;
+
+  font-size: 18px;
+}
+
+.searchInput {
+  flex: 1;
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+
+  color: #1e293b;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+/* ==========================================
+   Select
+========================================== */
+
+.select {
+  width: 180px;
+
+  height: 56px;
+
+  padding: 0 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid #dbe3ef;
+
+  background: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.select:hover {
+  border-color: #93c5fd;
+}
+
+.select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  background: #eff6ff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* ==========================================
+   Actions
+========================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   Reset Button
+========================================== */
+
+.resetBtn {
+  height: 56px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 14px;
+
+  border: 1px solid #dbe3ef;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.resetBtn:hover {
+  border-color: #2563eb;
+
+  color: #2563eb;
+
+  background: #eff6ff;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 1200px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .select {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .actions {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    gap: 12px;
+
+    padding: 16px;
+  }
+
+  .searchBox,
+  .select,
+  .resetBtn {
+    width: 100%;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .resetBtn {
+    width: 100%;
+  }
+}

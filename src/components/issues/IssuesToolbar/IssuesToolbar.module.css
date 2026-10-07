@@ -1,0 +1,192 @@
+/* ==========================
+   Toolbar
+========================== */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background: #ffffff;
+
+  padding: 20px;
+
+  border-radius: 18px;
+}
+
+/* ==========================
+   Search
+========================== */
+
+.searchBox {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  height: 56px;
+
+  padding: 0 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dbe3ef;
+
+  border-radius: 14px;
+
+  transition: 0.25s;
+}
+
+.searchBox:focus-within {
+  background: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.icon {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.searchInput {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+/* ==========================
+   Select
+========================== */
+
+.select {
+  width: 190px;
+
+  height: 56px;
+
+  padding: 0 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid #dbe3ef;
+
+  background: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.select:hover {
+  border-color: #93c5fd;
+}
+
+.select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  background: #eff6ff;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.resetBtn,
+.addBtn {
+  height: 56px;
+
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.resetBtn {
+  background: #ffffff;
+
+  border: 1px solid #dbe3ef;
+
+  color: #334155;
+}
+
+.resetBtn:hover {
+  color: #2563eb;
+
+  border-color: #2563eb;
+}
+
+.addBtn {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+}
+
+.addBtn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 992px) {
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .select {
+    flex: 1;
+  }
+
+  .actions {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+}

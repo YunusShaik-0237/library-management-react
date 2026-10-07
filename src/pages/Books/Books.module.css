@@ -1,0 +1,58 @@
+.header {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 28px 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 15px;
+
+  color: rgba(255,255,255,.9);
+
+  max-width: 600px;
+
+  line-height: 1.6;
+}
+
+.bookCount {
+  background: rgba(255,255,255,.18);
+
+  backdrop-filter: blur(12px);
+
+  padding: 18px 30px;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  min-width: 130px;
+}
+
+.bookCount h2 {
+  font-size: 34px;
+  margin: 0;
+}
+
+.bookCount span {
+  font-size: 14px;
+  opacity: .9;
+}

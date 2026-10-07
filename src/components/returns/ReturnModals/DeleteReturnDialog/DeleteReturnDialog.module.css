@@ -1,0 +1,132 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.dialog {
+  width: 460px;
+  max-width: 95%;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+
+  animation: popup .25s ease;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dialog h2 {
+  margin: 0 0 12px;
+
+  text-align: center;
+
+  color: #1e293b;
+}
+
+.dialog p {
+  text-align: center;
+
+  color: #64748b;
+
+  line-height: 1.6;
+
+  margin-bottom: 24px;
+}
+
+.info {
+  background: #f8fafc;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  margin-bottom: 28px;
+}
+
+.info div {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info div:last-child {
+  border-bottom: none;
+}
+
+.info span {
+  color: #64748b;
+}
+
+.info strong {
+  color: #1e293b;
+}
+
+.actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+.cancel,
+.delete {
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 12px 24px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.cancel {
+  background: #e2e8f0;
+
+  color: #334155;
+}
+
+.cancel:hover {
+  background: #cbd5e1;
+}
+
+.delete {
+  background: #ef4444;
+
+  color: #fff;
+}
+
+.delete:hover {
+  background: #dc2626;
+}

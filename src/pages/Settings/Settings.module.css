@@ -1,0 +1,332 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  padding: 28px;
+
+  min-height: calc(100vh - 80px);
+
+  background: #f8fafc;
+}
+
+/* ===========================================
+   HEADER
+=========================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 34px 38px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #1d4ed8
+  );
+
+  color: #fff;
+
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.18);
+
+  overflow: hidden;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 42px;
+
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 10px;
+
+  font-size: 17px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  line-height: 1.7;
+}
+
+.headerBadge {
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 220px;
+
+  height: 62px;
+
+  padding: 0 24px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(12px);
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+/* ===========================================
+   MAIN LAYOUT
+=========================================== */
+
+.container {
+  display: grid;
+
+  grid-template-columns: 260px 1fr;
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+/* ===========================================
+   SIDEBAR
+=========================================== */
+
+.sidebar {
+  position: sticky;
+
+  top: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border-radius: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: #475569;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.menuItem:hover {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  transform: translateX(3px);
+}
+
+.active {
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #2563eb
+  );
+
+  color: #fff;
+
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+/* Prevent child components from overflowing */
+
+.content > * {
+  width: 100%;
+
+  max-width: 100%;
+}
+
+/* ===========================================
+   COMMON CARD FIXES
+=========================================== */
+
+.content section,
+.content .card,
+.content form {
+  width: 100%;
+
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 20px;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width: 1200px) {
+
+  .container {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+
+  .headerBadge {
+    min-width: 190px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .page {
+    padding: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .headerBadge {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .sidebar {
+    position: static;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 24px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .menuItem {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .page {
+    padding: 14px;
+
+    gap: 20px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+  }
+
+  .headerBadge {
+    height: 54px;
+
+    font-size: 14px;
+  }
+
+  .sidebar {
+    padding: 14px;
+  }
+
+  .menuItem {
+    padding: 16px;
+
+    font-size: 15px;
+  }
+
+}

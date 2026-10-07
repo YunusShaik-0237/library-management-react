@@ -1,0 +1,217 @@
+/* ==========================================
+   Container
+========================================== */
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.table thead {
+  background: #eff6ff;
+}
+
+.table th {
+  padding: 18px 20px;
+  text-align: left;
+  color: #1e3a8a;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #dbeafe;
+}
+
+/* ==========================================
+   Body
+========================================== */
+
+.table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 14px;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+  background: #eff6ff;
+}
+
+/* ==========================================
+   Global Search Highlight
+========================================== */
+
+.highlightRow {
+  background: #dbeafe !important;
+  animation: highlightPulse 1.4s ease-in-out 2;
+}
+
+.highlightRow td {
+  border-top: 2px solid #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
+
+.highlightRow td:first-child {
+  border-left: 4px solid #2563eb;
+}
+
+.highlightRow td:last-child {
+  border-right: 4px solid #2563eb;
+}
+
+@keyframes highlightPulse {
+  0% {
+    background: #bfdbfe;
+  }
+
+  50% {
+    background: #dbeafe;
+  }
+
+  100% {
+    background: #eff6ff;
+  }
+}
+
+/* ==========================================
+   Book
+========================================== */
+
+.bookIcon {
+  width: 42px;
+  height: 42px;
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+}
+
+.bookInfo h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.bookInfo span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ==========================================
+   Status
+========================================== */
+
+.status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.available {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.issued {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ==========================================
+   Actions
+========================================== */
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.25s ease;
+}
+
+.actionBtn:hover {
+  transform: translateY(-2px);
+}
+
+.view {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.view:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.edit {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.edit:hover {
+  background: #ca8a04;
+  color: white;
+}
+
+.delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete:hover {
+  background: #dc2626;
+  color: white;
+}
+
+/* ==========================================
+   Empty State
+========================================== */
+
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 992px) {
+  .container {
+    overflow-x: auto;
+  }
+}

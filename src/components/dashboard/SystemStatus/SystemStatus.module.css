@@ -1,0 +1,156 @@
+/* ==========================================
+   System Status
+========================================== */
+
+.systemStatus {
+  margin: 35px 0;
+}
+
+.header {
+  margin-bottom: 22px;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ==========================================
+   Grid
+========================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+  transition: all .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================================
+   Icon
+========================================== */
+
+.icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 28px;
+
+  transition: .3s;
+}
+
+.card:hover .icon {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.content {
+  flex: 1;
+}
+
+.content h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   Status Colors
+========================================== */
+
+.online {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.warning {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.offline {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 992px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .systemStatus {
+    margin: 25px 0;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+}

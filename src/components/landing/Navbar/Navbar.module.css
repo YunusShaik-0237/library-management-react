@@ -1,0 +1,163 @@
+/* ===============================
+   Header
+================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   Navbar
+================================== */
+
+.navbar {
+  max-width: 1280px;
+  height: 75px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===============================
+   Logo
+================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+
+  cursor: pointer;
+}
+
+.logo span {
+  color: #0f172a;
+}
+
+/* ===============================
+   Navigation
+================================== */
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navLinks a:hover {
+  color: #2563eb;
+}
+
+/* ===============================
+   Login Button
+================================== */
+
+.loginBtn {
+  padding: 12px 26px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.loginBtn:hover {
+  background: #1d4ed8;
+}
+
+/* ===============================
+   Mobile Button
+================================== */
+
+.menuButton {
+  display: none;
+
+  border: none;
+  background: transparent;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+/* ===============================
+   Mobile Menu
+================================== */
+
+.mobileMenu {
+  display: none;
+}
+
+/* ===============================
+   Responsive
+================================== */
+
+@media (max-width: 768px) {
+
+  .navLinks,
+  .loginContainer {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .mobileMenu a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+  }
+
+  .mobileLoginBtn {
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+  }
+}

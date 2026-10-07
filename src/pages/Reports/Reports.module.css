@@ -1,0 +1,136 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  padding: 28px 32px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  box-shadow: 0 10px 25px
+    rgba(37, 99, 235, 0.18);
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+}
+
+.statCard {
+  min-width: 140px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+}
+
+.statCard h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  color: white;
+}
+
+.statCard span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 0 8px 25px
+    rgba(15, 23, 42, 0.06);
+}
+
+.paginationWrapper {
+  margin-top: -4px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 24px;
+  }
+
+  .stats {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+      2,
+      1fr
+    );
+
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
