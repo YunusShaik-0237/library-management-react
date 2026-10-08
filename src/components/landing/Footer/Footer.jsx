@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -25,10 +24,10 @@ const Footer = () => {
         <div className={styles.section}>
           <h3>Quick Links</h3>
 
-          <Link to="/">Home</Link>
-          <Link to="#features">Features</Link>
-          <Link to="#stats">Statistics</Link>
-          <Link to="#footer">Contact</Link>
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#stats">Statistics</a>
+          <a href="#footer">Contact</a>
         </div>
 
         {/* Contact */}

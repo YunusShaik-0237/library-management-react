@@ -5,6 +5,7 @@
 .hero {
   width: 100%;
   min-height: calc(100vh - 75px);
+  scroll-margin-top: 75px;
   background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
   display: flex;
   align-items: center;

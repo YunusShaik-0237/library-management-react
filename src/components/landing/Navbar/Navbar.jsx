@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import Button from "../../common/Button";
 import styles from "./Navbar.module.css";
 
 const navItems = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "#home" },
   { name: "Features", path: "#features" },
-  { name: "Statistics", path: "#statistics" },
+  { name: "Statistics", path: "#stats" },
   { name: "Contact", path: "#footer" },
 ];
 
@@ -28,23 +27,24 @@ const Navbar = () => {
         <ul className={styles.navLinks}>
           {navItems.map((item) => (
             <li key={item.name}>
-              <Link to={item.path}>{item.name}</Link>
+              <a href={item.path}>{item.name}</a>
             </li>
           ))}
         </ul>
 
         {/* Login Button */}
         <div className={styles.loginContainer}>
-          <Button
-            label="Login"
-            className={styles.loginBtn}
-          />
+          <Link to="/login" className={styles.loginBtn}>
+            Login
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           className={styles.menuButton}
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -61,19 +61,22 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
 
-            <Button
-              label="Login"
+            <Link
+              to="/login"
               className={styles.mobileLoginBtn}
-            />
+              onClick={() => setMenuOpen(false)}
+            >
+              Login
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

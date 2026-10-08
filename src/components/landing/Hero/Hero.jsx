@@ -5,7 +5,7 @@ import styles from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       <div className={styles.container}>
         {/* Left Content */}
         <motion.div
